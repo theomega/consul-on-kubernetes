@@ -127,11 +127,11 @@ kubectl logs consul-0
 The consul CLI can also be used to check the health of the cluster. In a new terminal start a port-forward to the `consul-0` pod.
 
 ```
-kubectl port-forward consul-0 8400:8400
+kubectl port-forward consul-0 8400:8400 8500:8500
 ```
 ```
 Forwarding from 127.0.0.1:8400 -> 8400
-Forwarding from [::1]:8400 -> 8400
+Forwarding from 127.0.0.1:8500 -> 8500
 ```
 
 Run the `consul members` command to view the status of each cluster member.
